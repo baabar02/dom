@@ -1,9 +1,9 @@
-const h1 = document.getElementsByTagName("h1")[0];
-console.log("select", h1);
-const randomToo = Math.random() * 10;
-console.log(randomToo);
+// const h1 = document.getElementsByTagName("h1")[0];
+// console.log("select", h1);
+// const randomToo = Math.random() * 10;
+// console.log(randomToo);
 
-h1.innerText = "sain uu Pinecone";
+// h1.innerText = "sain uu Pinecone";
 // h1.className = "title";
 // h1.className +=  " border";
 // h1.classList.add("title");
@@ -17,7 +17,7 @@ h1.innerText = "sain uu Pinecone";
 // h1.style.fontSize = "20px";
 // h1.style.backgroundColor = "yellow";
 
-console.log("selected element", h1);
+// console.log("selected element", h1);
 
 const h2 = document.getElementById("garchig");
 h2.textContent = "Welcome";
@@ -52,14 +52,37 @@ box1.innerHTML = '<p class = "title" >lorem text-2 </p> ';
 
 //event
 const btn = document.getElementById("btn");
+const h1 = document.querySelector('h1');
+let toggle1 = 0 ;
 console.log(btn);
 
-btn.addEventListener("click", () => {
-  console.log("clicked");
-  h1.classList.add("title");
-  h1.classList.add("border");
-});
+// btn.addEventListener("click", () => {
+//   console.log("clicked");
+//   if (toggle1 % 2 === 0) {
+//     h1.classList.toggle("title");
+//   } else {
+//     h1.classList.toggle("border");
+//   }
+//  toggle1++;
+// });
 
-btn.addEventListener("click", () => {
+
+
+// btn.addEventListener("click", () => {
+//   console.log("clicked");
+//   h1.classList.toggle("title");
+//   h1.classList.toggle("border");
+// });
+
+
+btn.addEventListener('click', () => {
   console.log("clicked");
+  if (h1.classList.contains("title")) {
+    h1.classList.remove("title");
+    h1.classList.remove("border");
+  } else {
+    h1.classList.add("title");
+    h1.classList.add("border");
+  }
+  
 });

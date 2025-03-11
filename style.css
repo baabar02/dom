@@ -1,8 +1,9 @@
-.h1 {
-  border: 1px solid black;
-  background-color: aqua;
-}
+
 
 .title {
-  background-color: green;
+  background-color: yellow;
+}
+
+.border {
+  border: 3px dashed red;
 }
