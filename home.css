@@ -1,46 +1,35 @@
-/* .box {
-    height: 400px;
-    width: 400px;
-    border: 1px solid green;
-
-} */
+.box {
+  height: 400px;
+  width: 400px;
+  border: 1px solid green;
+}
 .border {
-    height: 400px;
-    width: 400px;
-    border: 1px solid green;
+  height: 400px;
+  width: 400px;
+  border: 1px solid green;
 }
 
 .red {
-    
-    background-color:red;
+  background-color: red;
 }
 
 .blue {
-
-    background-color: blue;
+  background-color: blue;
 }
 
 .green {
-
-    background-color: green;
+  background-color: green;
 }
 
 .random {
-
-    background-color: yellow;
-
 }
-
-
 
 .box2 {
-    display: flex;
-    width: 400px;
-    height: 20px;
-    /* border: 1px solid green; */
-    margin-top: 10px;
-    justify-content: center;
-    justify-content: space-between;
-
+  display: flex;
+  width: 400px;
+  height: 20px;
+  /* border: 1px solid green; */
+  margin-top: 10px;
+  justify-content: center;
+  justify-content: space-between;
 }
-

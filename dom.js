@@ -52,8 +52,8 @@ box1.innerHTML = '<p class = "title" >lorem text-2 </p> ';
 
 //event
 const btn = document.getElementById("btn");
-const h1 = document.querySelector('h1');
-let toggle1 = 0 ;
+const h1 = document.querySelector("h1");
+let toggle1 = 0;
 console.log(btn);
 
 // btn.addEventListener("click", () => {
@@ -66,16 +66,13 @@ console.log(btn);
 //  toggle1++;
 // });
 
-
-
 // btn.addEventListener("click", () => {
 //   console.log("clicked");
 //   h1.classList.toggle("title");
 //   h1.classList.toggle("border");
 // });
 
-
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   console.log("clicked");
   if (h1.classList.contains("title")) {
     h1.classList.remove("title");
@@ -84,5 +81,4 @@ btn.addEventListener('click', () => {
     h1.classList.add("title");
     h1.classList.add("border");
   }
-  
 });
