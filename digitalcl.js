@@ -1,58 +1,60 @@
 function clockDisplay() {
-    const date = new Date();
-    let hrs = date.getHours(); // 0-23, no need for "hrs" parameter
-    let min = date.getMinutes(); // 0-59, no need for "min" parameter
-    let sec = date.getSeconds(); // 0-59, no need for "sec" parameter
-    // let session = "AM";
+  const date = new Date();
+  let hrs = date.getHours(); // 0-23,
+  let min = date.getMinutes(); // 0-59,
+  let sec = date.getSeconds(); // 0-59,
+  let mode = "AM";
 
-    // Convert to 12-hour format
-    // if (hrs === 0) {
-    //     hrs = 12; // Midnight
-    // } else if (hrs > 12) {
-    //     hrs = hrs - 12;
-    //     // session = "PM";
-    // }
+  if (hrs > 12) {
+    mode = "PM";
+  }
 
-    // Add leading zeros
-    hrs = hrs < 10 ? "0" + hrs : hrs;
-    min = min < 10 ? "0" + min : min;
-    sec = sec < 10 ? "0" + sec : sec;
+  if (hrs < 10) {
+    hrs = "0" + hrs;
+  } else {
+    hrs = hrs;
+  }
+  if (min < 10) {
+    min = "0" + min;
+  } else {
+    min = min;
+  }
+  if (sec < 10) {
+    sec = "0" + sec;
+  } else {
+    sec = sec;
+  }
 
-    // Update individual display elements
-    document.getElementById("hrs").textContent = hrs;
-    document.getElementById("min").textContent = min;
-    document.getElementById("sec").textContent = sec;
-    
-    // Optional: Add session indicator if you want to display AM/PM
-    // For now, we'll skip it since your HTML doesn't have a place for it
-    
-    setTimeout(clockDisplay, 1000); // Call itself every second
+  document.getElementById("hrs").textContent = hrs;
+  document.getElementById("min").textContent = min;
+  document.getElementById("sec").textContent = sec;
+  document.getElementById("mode").textContent = mode;
 }
 
-// Start the clock
-clockDisplay();
+setInterval(clockDisplay, 1000);
 
+const hrsDisplay = document.getElementById("hrs");
+const minDisplay = document.getElementById("min");
+const secDisplay = document.getElementById("sec");
+const startBtn = document.getElementById("start");
+const stopBtn = document.getElementById("stop");
+const resetBtn = document.getElementById("reset");
+const lapBtn = document.getElementById("lap");
+const lapDisplay = document.getElementById("lapDisplay");
 
+let hrs = 0;
+let min = 0;
+let sec = 0;
+let timer = null;
+let check = false;
 
-
-
-
-// console.log(currentTime.getHours());
-
-// const hrsDisplay = document.getElementById("hrs");
-// const minDisplay = document.getElementById("min");
-// const secDisplay = document.getElementById("sec");
-// const startBtn = document.getElementById("start");
-// const stopBtn = document.getElementById("stop");
-// const resetBtn = document.getElementById("reset");
-// const lapBtn = document.getElementById("lap");
-// const lapDisplay = document.getElementById("lapDisplay");
-
-// let hours = 0;
-// let minutes = 0;
-// let seconds = 0;
-// let timer = null;
-// let isRunning = false;
+// function updateDisplay() {
+//   if (hrs < 10) {
+//     hrs = "0" + hrs;
+//   } else {
+//     hrs = hrs;
+//   }
+// }
 
 // function updateDisplay() {
 //     hrsDisplay.textContent = hours < 10 ? "0" + hours : hours;
@@ -60,47 +62,55 @@ clockDisplay();
 //     secDisplay.textContent = seconds < 10 ? "0" + seconds : seconds;
 // }
 
-// function startTimer() {
-//     if (!isRunning) {
-//         isRunning = true;
-//         timer = setInterval(() => {
-//             seconds++;
-//             if (seconds === 60) {
-//                 seconds = 0;
-//                 minutes++;
-//             }
-//             if (minutes === 60) {
-//                 minutes = 0;
-//                 hours++;
-//             }
-//             updateDisplay();
-//         }, 1000);
-//         startBtn.textContent = "Pause";
-//     } else {
-//         clearInterval(timer);
-//         isRunning = false;
-//         startBtn.textContent = "Start";
-//     }
-// }
+function starTimer() {
+  if (check) {
+    check = true;
+    timer = setInterval(() => {
+      sec++;
+      if (sec === 60) {
+        sec = 0;
+        min++;
+      }
+      if (min === 60) {
+        min = 0;
+        hrs++;
+      }
+      updateDisplay();
+    }, 1000);
 
-// function stopTimer() {
-//     if (isRunning) {
-//         clearInterval(timer);
-//         isRunning = false;
-//         startBtn.textContent = "Start";
-//     }
-// }
+    startBtn.textContent = "Pause";
+  } else {
+    clearInterval(timer);
+    check = false;
+    startBtn.textContent = "Start";
+  }
+}
 
-// function resetTimer() {
-//     clearInterval(timer);
-//     isRunning = false;
-//     hours = 0;
-//     minutes = 0;
-//     seconds = 0;
-//     updateDisplay();
-//     startBtn.textContent = "Start";
-//     lapDisplay.innerHTML = "";
-// }
+function stopTimer() {
+  if (check) {
+    clearInterval(timer);
+    check = false;
+    startBtn.textContent = "Start";
+  }
+}
+
+function resetTimer() {
+    clearInterval(timer);
+    check = false;
+    hrs = 0;
+    min = 0;
+    sec = 0;
+    updateDisplay();
+    startBtn.textContent = "Start";
+    lapDisplay.innerHTML = "";
+}
+
+function recordLap() {
+    if(check) {
+        const lapTime = document.createElement("div");
+        const timeTot =  
+    }
+}
 
 // function recordLap() {
 //     if (isRunning) {
