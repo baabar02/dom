@@ -12,20 +12,39 @@
   </head>
   <body>
     <div class="container">
-      <div class="display"></div>
-        <div class="buttons">
-          <button id="reset">AC</button>
-          <button id="">Lap</button>
-          <button id="">Lap</button>
-          <button id="">Lap</button>
-          <button id="">Lap</button>
-          <button id="">Lap</button>
-          <button id="">Lap</button>
-          <button id="">Lap</button>
+      <div class="clock">
+        <span id="hours">00</span>
+        <span id="minutes">00</span>
+      </div>
+      <div class="display">0</div>
+        <div class="buttons-container">
+        
+              <button class="operator" id="clear">AC</button>
+              <button class="operator" id="plus1">+/-</button>
+              <button class="operator" id="minus">%</button>
+              <button class="function" id="division">/</button>
+              
+              <button class="key" id="number-7">7</button>
+              <button class="key" id="number-8">8</button>
+              <button class="key" id="number-9">9</button>
+              <button class="function" id="multiple">&times;</button>
+              <button class="key" id="number-4">4</button>
+              <button class="key" id="number-5">5</button>
+              <button class="key" id="number-6">6</button>
+              <button class="function" id="minus">-</button>
+              <button class="key" id="number-1">1</button>
+              <button class="key" id="number-2">2</button>
+              <button class="key" id="number-3">3</button>
+              <button class="function" id="plus">+</button>
+              <!-- <button class="function" id="equal">=</button>  -->
+              <button class="key" id="number-0">0</button>
+              <button class="key" id="decimal">.</button>
+              <button class="function" id="equal">=</button>    
+         
           <div id="lapDisplay"></div>
         </div>
       </div>
     </div>
-    <script src="./digitalcl.js"></script>
+    <script src="./calculator.js"></script>
   </body>
 </html>

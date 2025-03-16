@@ -48,50 +48,39 @@ let sec = 0;
 let timer = null;
 let check = false;
 
-// function updateDisplay() {
-//   if (hrs < 10) {
-//     hrs = "0" + hrs;
-//   } else {
-//     hrs = hrs;
-//   }
-// }
+function updateDisplay() {
+    hrsDisplay.textContent = hrs.toString().padStart(2, "0");
+    minDisplay.textContent = min.toString().padStart(2, "0");
+    secDisplay.textContent = sec.toString().padStart(2, "0");
+}
 
-// function updateDisplay() {
-//     hrsDisplay.textContent = hours < 10 ? "0" + hours : hours;
-//     minDisplay.textContent = minutes < 10 ? "0" + minutes : minutes;
-//     secDisplay.textContent = seconds < 10 ? "0" + seconds : seconds;
-// }
-
-function starTimer() {
-  if (check) {
-    check = true;
-    timer = setInterval(() => {
-      sec++;
-      if (sec === 60) {
-        sec = 0;
-        min++;
-      }
-      if (min === 60) {
-        min = 0;
-        hrs++;
-      }
-      updateDisplay();
-    }, 1000);
-
-    startBtn.textContent = "Pause";
-  } else {
-    clearInterval(timer);
-    check = false;
-    startBtn.textContent = "Start";
-  }
+function startTimer() {
+    if (!check) { 
+        check = true;
+        timer = setInterval(() => {
+            sec++;
+            if (sec === 60) {
+                sec = 0;
+                min++;
+            }
+            if (min === 60) {
+                min = 0;
+                hrs++;
+            }
+            updateDisplay();
+        }, 1000);
+        startBtn.textContent = "Pause";
+    } else {  
+        clearInterval(timer);
+        check = false;
+        startBtn.textContent = "Start";
+    }
 }
 
 function stopTimer() {
-  if (check) {
     clearInterval(timer);
     check = false;
     startBtn.textContent = "Start";
-  }
 }
 
 function resetTimer() {
@@ -106,26 +95,17 @@ function resetTimer() {
 }
 
 function recordLap() {
-    if(check) {
+    if (check) {
         const lapTime = document.createElement("div");
-        const timeTot =  
+        const timeTot = `${hrsDisplay.textContent}:${minDisplay.textContent}:${secDisplay.textContent}`;
+        lapTime.textContent = `Lap ${lapDisplay.children.length + 1}: ${timeTot}`;
+        lapDisplay.appendChild(lapTime);
     }
 }
 
-// function recordLap() {
-//     if (isRunning) {
-//         const lapTime = document.createElement("div");
-//         const time = `${hrsDisplay.textContent}:${minDisplay.textContent}:${secDisplay.textContent}`;
-//         lapTime.textContent = `Lap ${lapDisplay.children.length + 1}: ${time}`;
-//         lapDisplay.appendChild(lapTime);
-//     }
-// }
+startBtn.addEventListener("click", startTimer);
+stopBtn.addEventListener("click", stopTimer);
+resetBtn.addEventListener("click", resetTimer);
+// lapBtn.addEventListener("click", recordLap);  
 
-// // Event listeners
-// startBtn.addEventListener("click", startTimer);
-// stopBtn.addEventListener("click", stopTimer);
-// resetBtn.addEventListener("click", resetTimer);
-// lapBtn.addEventListener("click", recordLap);
-
-// // Initial display
-// updateDisplay();
+updateDisplay();  
