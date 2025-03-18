@@ -33,7 +33,7 @@ body {
 
 .display {
   display: flex;
-  /* height: 20%; */
+  height: 80px;
   justify-content: flex-end;
   text-align: right;
   padding-block-start: 4px;
