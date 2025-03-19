@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>game</title>
     <link rel="stylesheet" href="./game.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -13,14 +13,20 @@
   <body>
     <div class="container">
       <div class="header">
-        <span class="s1">50</span>
-        <button class="reset">reset</button>
-        <span class="s2">50</span>
+        <span id="s1">50</span>
+        <button id="reset">reset</button>
+        <span id="s2">50</span>
       </div>
       <div class="side-0">
-        <button class="side-1"></button>
-        <button class="side-2"></button>
+        <button id="blue">
+          <span id="winner1">winner</span>
+        </button>
+        <button id="red">
+          <span id="winner2">winner</span>
+        </button>
       </div>
+      <div class="win"></div>
     </div>
+    <script src="./game.js"></script>
   </body>
 </html>
