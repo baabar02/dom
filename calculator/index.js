@@ -1,140 +1,146 @@
-const test = [2, 3, 6, 9, 7];
 
-let numbers = [10, 20, 30, 40, 50];
 
-numbers.push(60);
-console.log(numbers);
+// const test = [2, 3, 6, 9, 7];
 
-numbers.unshift(5);
-console.log(numbers);
+// let numbers = [10, 20, 30, 40, 50];
 
-// let numbers[1] = 100;
+// numbers.push(60);
+// console.log(numbers);
 
-numbers.splice(1, 2, 100);
-console.log(numbers);
+// numbers.unshift(5);
+// console.log(numbers);
 
-numbers.pop(numbers);
-console.log(numbers);
+// // let numbers[1] = 100;
 
-numbers.splice(100);
-console.log(numbers);
+// numbers.splice(1, 2, 100);
+// console.log(numbers);
 
-let reverse = [];
+// numbers.pop(numbers);
+// console.log(numbers);
 
-for (let i = numbers.length - 1; i > 0; i--) {
-  reverse.push(numbers[i]);
-}
-console.log(reverse);
+// numbers.splice(100);
+// console.log(numbers);
 
-reverse = [...numbers].reverse();
-console.log(reverse);
+// let reverse = [];
 
-let numbers1 = [3, 6, 9, 12, 15];
+// for (let i = numbers.length - 1; i > 0; i--) {
+//   reverse.push(numbers[i]);
+// }
+// console.log(reverse);
 
-let newNumbers = numbers1.map((index) => index + 2);
-console.log(newNumbers);
+// reverse = [...numbers].reverse();
+// console.log(reverse);
 
-numbers1 = numbers1.map(function (index) {
-  return index + 2;
-});
-console.log(numbers1);
+// let numbers1 = [3, 6, 9, 12, 15];
 
-let filtered = [];
+// let newNumbers = numbers1.map((index) => index + 2);
+// console.log(newNumbers);
 
-filtered = numbers1.filter((index) => index > 8);
-console.log(filtered);
+// numbers1 = numbers1.map(function (index) {
+//   return index + 2;
+// });
+// console.log(numbers1);
 
-filtered = numbers1.filter(function (index) {
-  if (index > 8) {
-    return true;
-  }
-});
+// let filtered = [];
 
-console.log(filtered);
+// filtered = numbers1.filter((index) => index > 8);
+// console.log(filtered);
 
-let numbers2 = [18, 21, 24];
+// filtered = numbers1.filter(function (index) {
+//   if (index > 8) {
+//     return true;
+//   }
+// });
 
-let merged = numbers1.concat(numbers2);
-console.log(merged);
+// console.log(filtered);
 
-console.log(numbers2, "1");
+// let numbers2 = [18, 21, 24];
 
-console.log(numbers2.join());
-console.log(numbers2.join(" "));
-console.log(numbers2.join("-"));
+// let merged = numbers1.concat(numbers2);
+// console.log(merged);
 
-console.log(numbers2.toString());
-console.log(numbers2.join(""));
+// console.log(numbers2, "1");
 
-let numbers3 = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
-];
-let newArr = numbers3.flat();
+// console.log(numbers2.join());
+// console.log(numbers2.join(" "));
+// console.log(numbers2.join("-"));
 
-console.log(newArr);
+// console.log(numbers2.toString());
+// console.log(numbers2.join(""));
 
-let colors = ["red", "blue", "green", "yellow", "purple"];
+// let numbers3 = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+// ];
+// let newArr = numbers3.flat();
 
-let result1 = colors[2];
-let color = colors.find((color, index) => {
-  return index === 2;
-});
-console.log(result1);
-console.log(color);
+// console.log(newArr);
 
-let green = colors.find((color) => color === "green");
-console.log(green);
+// let colors = ["red", "blue", "green", "yellow", "purple"];
 
-let length = colors.find((color) => color.length > 5);
-console.log(length);
+// let result1 = colors[2];
+// let color = colors.find((color, index) => {
+//   return index === 2;
+// });
+// console.log(result1);
+// console.log(color);
 
-let yellow = colors.find((value, index) => {
-  return value.startsWith("y");
-});
+// let green = colors.find((color) => color === "green");
+// console.log(green);
 
-console.log(yellow);
+// let length = colors.find((color) => color.length > 5);
+// console.log(length);
 
-let animals = ["elephant", "cat", "bear", "dog", "cow"];
+// let yellow = colors.find((value, index) => {
+//   return value.startsWith("y");
+// });
 
-var animal = animals.find((value, index, array) => {
-  return value.startsWith("c");
-});
+// console.log(yellow);
 
-console.log(animal); // cat
+// let animals = ["elephant", "cat", "bear", "dog", "cow"];
 
-let words = ["hello", "world", "javascript", "coding"];
+// var animal = animals.find((value, index, array) => {
+//   return value.startsWith("c");
+// });
 
-let match = words.find((word) => {
-  return word === "world";
-});
-console.log(match);
+// console.log(animal); // cat
 
-let match1 = words.find((word, index, array) => {
-  return array.length === 4;
-});
-console.log(match1);
+// let words = ["hello", "world", "javascript", "coding"];
 
-let letterSeven = words.find((words) => words === 7);
+// let match = words.find((word) => {
+//   return word === "world";
+// });
+// console.log(match);
 
-console.log(letterSeven);
+// let match1 = words.find((word, index, array) => {
+//   return array.length === 4;
+// });
+// console.log(match1);
 
-let letter = words.find((el) => {
-  return el === 7;
-});
+// let letterSeven = words.find((words) => words === 7);
 
-console.log(letter);
+// console.log(letterSeven);
 
-console.log(words.join(", "));
+// let letter = words.find((el) => {
+//   return el === 7;
+// });
 
-let numbers4 = [4, 8, 12, 16];
+// console.log(letter);
 
-let sum = numbers4.reduce((accumulator, currentValue) => {
-  return accumulator + currentValue;
-}, 0); // to ask 0?
+// console.log(words.join(", "));
 
-console.log(sum);
+// let numbers4 = [4, 8, 12, 16];
+
+// let suma = numbers4.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// }, 0); // to ask 0?
+
+// console.log(suma); 
+
+// const tripled = numbers4.map(num => num * 3);
+// console.log(numbers4);
+
 
 const students = [
   { id: 1, name: "Alice", age: 14, grade: "8th" },
@@ -148,66 +154,124 @@ const schools = [
   { name: "Riverside Academy", city: "Los Angeles", minAge: 15 },
 ];
 
-// let studentmatch = students.map(student => ({
-//     // name:students.age
-//     const eligibleSchools = schools.filter(school => school.minAge >= students.age).map(s => s.name).join(',')
 
-//         return {...student, eligibleSchools: age}
 
-// }));
-// console.log(studentmatch);
+const studentMatches = students.map((student) => {
+  const filteredEligibleSchools = schools.filter(
+    (school) => school.minAge >= student.age
+  );
+  
+  
+  const schoolNames = filteredEligibleSchools.map((s) => s.name);
+  const joinedSchoolNames = schoolNames.join(",");
 
-// const studentMatches = students.map((student) => {
-//   const filteredEligibleSchools = schools.filter(
-//     (school) => school.minAge >= student.age
-//   );
-//   const schoolNames = filteredEligibleSchools.map((s) => s.name);
-//   const joinedSchoolNames = schoolNames.join(",");
+  return {
+    ...student,
+    filteredEligibleSchools: joinedSchoolNames,
+  };
+});
 
-//   return {
-//     ...student,
-//     eligibleSchools: joinedSchoolNames,
-//   };
-// });
+console.log(studentMatches);
 
-// console.log(studentMatches);
+const studentsA = [
+    { name: "Alice", age: 15 },
+    { name: "Bob", age: 17 },
+    { name: "Charlie", age: 13 }
+  ];
+  
+  const schoolsA = [
+    { name: "High School A", minAge: 16 },
+    { name: "High School B", minAge: 14 },
+    { name: "Middle School", minAge: 12 }
+  ];
+
+const answer = studentsA.map(a => {
+const surguuli = schoolsA
+.filter (a =>  schoolsA.minAge >= studentsA.age)
+.map(a => a.name)
+.join(", ");
+
+return {...a, schoolsA};
+
+});
+
+console.log(answer);
+
 
 let value = 0;
-const array = ["x++", "++x", "--x", "x--"]; //=>0
+const array = ["x++", "++x", "--x", "x--"];
 
-let findX = array.map((x) => {
-  if (x == "x++") {
-    value += 1;
-  }
-  if (x == "++x") {
-    value += 0;
-  }
-  if (x == "--x") {
-    value += 0;
-  }
-  if (x == "x--") {
-    value -= 1;
+array.forEach((x) => {
+  if (x === "x++") {
+    value += 1;  
+  } else if (x === "++x") {
+    value += 1;  
+  } else if (x === "--x") {
+    value -= 1;  
+  } else if (x === "x--") {
+    value -= 1;  
   }
 });
 
-console.log(value);
+console.log(value);  // 0
 
 const m = 100;
-const n = 3;
+const n = 5;
 
-let numb1 = [];
-let numb2 = [];
+const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+console.log(numbers);  
 
-const myfunction = (n, m) => {
-  numb1 = m.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-  });
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum);  
+
+const myFunction = (n, m) => {
+    
+    const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+    const number2 = numbers.filter(num => num % n === 0);
+    return number2
+};  
+
+const divisibleBy3 = myFunction(n, m);
+console.log(divisibleBy3); 
+
+const myFunction1 = (n, m) => {
+    const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+    const divisibleByN = numbers.filter(num => num % n === 0);
+    const notDivisible = numbers.filter(num => num % n !== 0);
+    return notDivisible;  
+};
+
+console.log(myFunction1(n, m));
+
+const myFunction2 = (n, m) => {
+    const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+    const number2 = numbers.filter(num => num % n === 0);
+    const totalSum = numbers.reduce((acc, curr) => acc + curr, 0);
+    const divisibleSum = number2.reduce((acc, curr) => acc + curr, 0);
+    return totalSum - divisibleSum;  // Sum of all minus sum of divisible
+};
+
+console.log(myFunction2(n, m));  // 3350
+
+
+
+const numA = [];
+for (let i = 0; i <= m; i++) {
+    numA.push(i) ;
+}
+console.log(numA);  
+
+const m1 = Array.from({length: m + 1}, (_ , i) => i); 
+const doubled = m1.map(num => num * 2);
+   
+console.log(doubled);
+
 
   // return numb1 - numb2
-};
-console.log(numb1);
 
-// const num1 = [1, 2, 3];
-// let num2 = [];
-// num2 = num1 + num1;
-// console.log([...num2, ...num2]);
+const num1 = [1, 2, 3];
+let num2 = [];
+num2 = num1 + num1;
+console.log([...num2,...num2]);
+
+
