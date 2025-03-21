@@ -1,5 +1,3 @@
-
-
 // const test = [2, 3, 6, 9, 7];
 
 // let numbers = [10, 20, 30, 40, 50];
@@ -136,11 +134,10 @@
 //   return accumulator + currentValue;
 // }, 0); // to ask 0?
 
-// console.log(suma); 
+// console.log(suma);
 
 // const tripled = numbers4.map(num => num * 3);
 // console.log(numbers4);
-
 
 const students = [
   { id: 1, name: "Alice", age: 14, grade: "8th" },
@@ -154,14 +151,11 @@ const schools = [
   { name: "Riverside Academy", city: "Los Angeles", minAge: 15 },
 ];
 
-
-
 const studentMatches = students.map((student) => {
   const filteredEligibleSchools = schools.filter(
     (school) => school.minAge >= student.age
   );
-  
-  
+
   const schoolNames = filteredEligibleSchools.map((s) => s.name);
   const joinedSchoolNames = schoolNames.join(",");
 
@@ -174,104 +168,115 @@ const studentMatches = students.map((student) => {
 console.log(studentMatches);
 
 const studentsA = [
-    { name: "Alice", age: 15 },
-    { name: "Bob", age: 17 },
-    { name: "Charlie", age: 13 }
-  ];
-  
-  const schoolsA = [
-    { name: "High School A", minAge: 16 },
-    { name: "High School B", minAge: 14 },
-    { name: "Middle School", minAge: 12 }
-  ];
+  { name: "Alice", age: 15 },
+  { name: "Bob", age: 17 },
+  { name: "Charlie", age: 13 },
+];
 
-const answer = studentsA.map(a => {
-const surguuli = schoolsA
-.filter (a =>  schoolsA.minAge >= studentsA.age)
-.map(a => a.name)
-.join(", ");
+const schoolsA = [
+  { name: "High School A", minAge: 16 },
+  { name: "High School B", minAge: 14 },
+  { name: "Middle School", minAge: 12 },
+];
 
-return {...a, schoolsA};
+const answer = studentsA.map((a) => {
+  const surguuli = schoolsA
+    .filter((a) => schoolsA.minAge >= studentsA.age)
+    .map((a) => a.name)
+    .join(", ");
 
+  return { ...a, schoolsA };
 });
 
 console.log(answer);
-
 
 let value = 0;
 const array = ["x++", "++x", "--x", "x--"];
 
 array.forEach((x) => {
   if (x === "x++") {
-    value += 1;  
+    value += 1;
   } else if (x === "++x") {
-    value += 1;  
+    value += 1;
   } else if (x === "--x") {
-    value -= 1;  
+    value -= 1;
   } else if (x === "x--") {
-    value -= 1;  
+    value -= 1;
   }
 });
 
-console.log(value);  // 0
+console.log(value); // 0
 
-const m = 100;
-const n = 5;
+// const m = 100;
+// const n = 5;
 
-const numbers = Array.from({ length: m + 1 }, (_, i) => i);
-console.log(numbers);  
+// const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+// console.log(numbers);
 
-const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-console.log(sum);  
+// const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+// console.log(sum);
 
-const myFunction = (n, m) => {
-    
-    const numbers = Array.from({ length: m + 1 }, (_, i) => i);
-    const number2 = numbers.filter(num => num % n === 0);
-    return number2
-};  
+// const myFunction = (n, m) => {
 
-const divisibleBy3 = myFunction(n, m);
-console.log(divisibleBy3); 
+//     const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+//     const number2 = numbers.filter(num => num % n === 0);
+//     return number2
+// };
 
-const myFunction1 = (n, m) => {
-    const numbers = Array.from({ length: m + 1 }, (_, i) => i);
-    const divisibleByN = numbers.filter(num => num % n === 0);
-    const notDivisible = numbers.filter(num => num % n !== 0);
-    return notDivisible;  
-};
+// const divisibleBy3 = myFunction(n, m);
+// console.log(divisibleBy3);
 
-console.log(myFunction1(n, m));
+// const myFunction1 = (n, m) => {
+//     const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+//     const divisibleByN = numbers.filter(num => num % n === 0);
+//     const notDivisible = numbers.filter(num => num % n !== 0);
+//     return notDivisible;
+// };
 
-const myFunction2 = (n, m) => {
-    const numbers = Array.from({ length: m + 1 }, (_, i) => i);
-    const number2 = numbers.filter(num => num % n === 0);
-    const totalSum = numbers.reduce((acc, curr) => acc + curr, 0);
-    const divisibleSum = number2.reduce((acc, curr) => acc + curr, 0);
-    return totalSum - divisibleSum;  // Sum of all minus sum of divisible
-};
+// console.log(myFunction1(n, m));
 
-console.log(myFunction2(n, m));  // 3350
+// const myFunction2 = (n, m) => {
+//     const numbers = Array.from({ length: m + 1 }, (_, i) => i);
+//     const number2 = numbers.filter(num => num % n === 0);
+//     const totalSum = numbers.reduce((acc, curr) => acc + curr, 0);
+//     const divisibleSum = number2.reduce((acc, curr) => acc + curr, 0);
+//     return totalSum - divisibleSum;
+// };
 
+// console.log(myFunction2(n, m));  // 3350
 
+// const numA = [];
+// for (let i = 0; i <= m; i++) {
+//     numA.push(i) ;
+// }
+// console.log(numA);
 
-const numA = [];
-for (let i = 0; i <= m; i++) {
-    numA.push(i) ;
-}
-console.log(numA);  
+// const m1 = Array.from({length: m + 1}, (_ , i) => i);
+// const doubled = m1.map(num => num * 2);
 
-const m1 = Array.from({length: m + 1}, (_ , i) => i); 
-const doubled = m1.map(num => num * 2);
-   
-console.log(doubled);
+// console.log(doubled);
 
+//   // return numb1 - numb2
 
-  // return numb1 - numb2
+// const num1 = [1, 2, 3];
+// let num2 = [];
+// num2 = num1 + num1;
+// console.log([...num2,...num2]);
 
-const num1 = [1, 2, 3];
-let num2 = [];
-num2 = num1 + num1;
-console.log([...num2,...num2]);
+// const n = 3;
 
-
+// const myFunction4 = (n) => {
+//   // const numbers = ({ length: n + 1 }, (_, i) => i);
+//   const n1 = n.filter((num) => num % 2 === 0);
+//   return numbers;
+// };
+// console.log(n);
+// const myFunction = (number) => {
+//   if (number % 2 === 0) {
+//     return number;
+//   } else {
+//     return number * 2;
+//   }
+// };
+// console.log(n);
+// myFunction();
