@@ -70,9 +70,8 @@ usersPromise
     return response.json(); //
   })
   .then((users) => {
-   
     console.log(users);
-    
+
     // const userNames = users.map((user) => {
     //   return user.name;
     // });
@@ -101,60 +100,43 @@ usersPromise
     //   return user.company.name.toUpperCase();
     // });
     // console.log(company);
-    // const webs = users.filter((user)=> 
+    // const webs = users.filter((user)=>
     //   user.website.includes(".org"))
     //     .map((user) => user.website)
     //    console.log(webs);
     // const webs = users.filter((user) => user.website.includes('.org'));
     // console.log(webs);
-    
+
     // const geoData = users.map((user)=>{
     //   return {geo: user.address.geo};
     // })
     // console.log(geoData);
     // const geoDatalat = users.reduce((acc, user) => {
     //   return acc + parseFloat(user.address.geo.lat);
-     
-    // },0) / users.length;   
+
+    // },0) / users.length;
     // console.log('average latitude:', geoDatalat);
-    // const inter = users.filter((user) => 
+    // const inter = users.filter((user) =>
     //    user.company.catchPhrase.includes('interface'));
     // console.log(inter);
-    const newArray = users.reduce((acc,user)=>{
-      const company = user.company.name;
-      acc[company] = acc[company] || [];
-      acc[company].push({username: user.username, name: user.name});
-      return acc;
-    }, {}) ;
-    console.log(newArray);
-    
+    //   const newArray = users.reduce((acc, user) => {
+    //     const company = user.company.name;
+    //     acc[company] = acc[company] || [];
+    //     acc[company].push({ username: user.username, name: user.name });
+    //     return acc;
+    //   }, {});
+    //   console.log(newArray);
   });
-  
- 
 
-  // usersPromise.then((response)=> {
-  //   return response.json()
-  //   .then((users)=>{
-      
-      
-  //   });
+// usersPromise.then((response)=> {
+//   return response.json()
+//   .then((users)=>{
 
-  // });
-  // usersPromise.then((response) =>{
-  //   return response.json().then((users) =>{
+//   });
 
-  //     const usersNum = users.reduce((user) => {
-  //       return {name: user.name, city: user.city}
-  //     })
-
-  //   })
-  // }) 
-
-
-
+// });
 
 //   "a" == true -> true
 //   "" == true -> false
 //   0 = true ->  false
 //   1 = true -> true
-
