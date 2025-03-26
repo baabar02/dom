@@ -119,35 +119,32 @@ usersPromise
     // const inter = users.filter((user) =>
     //    user.company.catchPhrase.includes('interface'));
     // console.log(inter);
-      // const newArray = users.reduce((acc, user) => {
-      //   const company = user.company.name;
-      //   acc[company] = acc[company] || [];
-      //   acc[company].push({ username: user.username, name: user.name });
-      //   return acc;
-      // }, {});
-      // console.log(newArray);
+    // const newArray = users.reduce((acc, user) => {
+    //   const company = user.company.name;
+    //   acc[company] = acc[company] || [];
+    //   acc[company].push({ username: user.username, name: user.name });
+    //   return acc;
+    // }, {});
+    // console.log(newArray);
 
-    // const groupedByCompany = users.reduce((acc, user) => {
-    //   const companyName = user.company.name;
-   
-    //   if (!acc[companyName]) {
-    //     acc[companyName] = [];
-    //   } {};
-   
-    //   acc[companyName].push(user);
-      
-    // });
-    // console.log(groupedByCompany);
+    const groupedByCompany = users.reduce((acc, user) => {
+      const companyName = user.company.name;
+
+      if (!acc[companyName]) {
+        acc[companyName] = [];
+      }
+      {
+      }
+
+      acc[companyName].push(user);
+    });
+    console.log(groupedByCompany);
   });
 
-
- 
-// usersPromise.then((response)=> {
-//   return response.json()
-//   .then((users)=>{
-
+// userPromise.then((response) => {
+//   return response.json().then((users) => {
+//     console.log(users);
 //   });
-
 // });
 
 //   "a" == true -> true
