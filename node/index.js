@@ -107,82 +107,165 @@
 // const lowestPrices = Math.min(...prices);
 // console.log(lowestPrices);
 
-// const a = ["leet", "code"];
-// const b = "e";
 
-// const include = a.filter((el, index) => {
-//   return a.includes(index === e);
+
+const accounts = [
+  [1, 2, 3],
+  [4, 3, 2],
+];
+
+for (let i = 0; i < accounts.length; i++) {
+  let sum = 0;
+  for (let j = 0; j < accounts[i].length; j++) {
+    sum = sum + accounts[i][j];
+  }
+  console.log(sum);
+}
+// let greatArr = 0; 
+
+// for (let i = 0; i < arr2.length; i++) {
+//   let sumA = 0;
+
+//   for(let j = 0; j <arr2[i].length; j++){
+//     sumA = sumA + arr2[i][j]
+
+//   } 
+
+//   if( sumA > greatArr) {
+//     greatArr = sumA
+//   }
+//   console.log('sum of subarray' + i + ":" + sumA);
+//   console.log('final highest sum' + greatArr);
+  
+// }
+
+// const arr2 = [[3, 4, 5],[1, 2, 3], [3, 4, 7]];
+
+// const sum = arr2.reduce((acc, subArr)=> {
+//   return acc + subArr.reduce((subAcc, num) => subAcc + num, 0);
+// },0)
+
+// console.log(sum);
+
+// let sum = 0;
+// arr2.forEach(subArr => {
+//   subArr.forEach(num => {
+//     sum = sum + num;
+//   });
 // });
-// console.log(index);
+// console.log(sum);
+
 
 // const words = "leet";
-// const char = "e";
-
-// const isIncluded = words.includes(char);
-// console.log("isIncluded :", isIncluded);
-// const words = ["leet", "code"];
-// const char = "e";
+// const letter = "e";
 // const arr = [];
-// words.forEach((el, index) => {
-//   if (words.includes(char)) {
-//     conts = result.push(index);
+
+// const isIncluded = words.includes(letter);
+// console.log("isIncluded :", isIncluded);
+
+
+// words.forEach(el,index => {
+//   if (el.includes(letter)) {
+//    result.push(index);
 //   }
 // });
 // console.log(result);
 
-// for biched words - ugnuudiig console.log hii
-// for (i = 0; i < words.length; i++) {
-//   if (char.includes(char)) {
-//     result.push(index);
+// const words = ['leet', 'code']
+// const letter = 'e'
+// const result = [];
+
+// words.forEach((el, index) => {
+
+//   if (el.includes(letter)) {
+
+//     result.push(index)
 //   }
-// }
+// });
+// console.log(result);
 
-const accounts = [
-  [1, 2, 3],
-  [3, 2, 1],
-];
 
-// for (let i = 0; i < accounts.length; i++) {
-//   // let sum = 0;
-//   for (let j = 0; j < accounts[i].length; j++) {
-//     sum = sum + accounts[i][j];
-//   }
-//   console.log(sum);
-// }
 
-// const words = ["ad", "bd", "aaab", "baa", "badab"];
+
+// const words2 = ["ad", "bd", "aaab", "baa", "badab"];
 // const allowed = "ab";
 // const found = [];
 
-// isIncluded = words.includes("ab");
-// words.filter(() => {
-//   if (words.includes(allowed) === true) {
-
-//     found.push(words);
+// words2.forEach(word => {
+//   let isValid = true;
+//   for(let char of word) {
+//     if(!allowed.includes(char)){
+//      isValid = false;
+//     break;
+//    }
 //   }
-//   console.log(found);
+//   if(isValid) {
+//     found.push(word);
+//   }
 // });
+// console.log(found);
 
-const arr2 = [1, 2, 3];
-// let sum = 0
+const stringNumbers = ['333', '343', '444', '3344', '4334'];
+const cc = '34';
+const stored = [];
 
-// for (let i = 0; i < arr2.length; i++) {
-//   sum += arr2[i]
-// }
-
-// const sum = arr2.reduce((accounts, el) => {
-//   return (acc += el);
-// }, 0);
-let result = 0;
-
-accounts.forEach((el) => {
-  const sum = reducer(el);
-  console.log(sum);
-  if (result < sum) {
-    result = sum;
+stringNumbers.forEach(string => {
+  let isValid = true;
+  for (let char of string) {
+    if (!cc.includes(char)) {
+      isValid = false;
+      break;
+    }
+  }
+  if (isValid) {
+    stored.push(string);
   }
 });
 
-const result = reducer((arr2) => {
-  const sum = arr2;
-});
+console.log(stored); 
+
+const nums = [8, 1, 2, 2, 3];
+let result = []
+
+for( let i = 0; i < nums.length; i++){
+  let count = 0;
+  console.log(count);
+  for(let j = 0; j < nums.length; j++){
+    if(nums[j]> nums[i]){
+      count++;
+    }
+  }
+result.push(count)
+}
+console.log(result);
+
+const result1 =nums.map( i => nums.filter(j => j > i).length);
+
+console.log(result1);
+
+
+
+
+
+
+
+
+
+
+
+// Массив nums өгөгдсөн үед, nums[i] бүрийн хувьд түүнээс жижиг хэдэн тоо байгааг ол.
+// Өөрөөр хэлбэл, nums[i]-ээс бага nums[j] байх хүчинтэй j-ийн тоог тоол. (j ≠ i байх ёстой).
+// Буцаах утга нь массив байх болно.
+// Жишээ 1:
+// Оролт:
+// nums = [8,1,2,2,3]
+// Гаралт:
+// [4,0,1,1,3]
+// Тайлбар:
+// nums[0] = 8 → Үүнээс бага 4 тоо байна: (1, 2, 2, 3).
+// nums[1] = 1 → Үүнээс бага тоо байхгүй.
+// nums[2] = 2 → Үүнээс бага 1 тоо байна: (1).
+
+
+
+
