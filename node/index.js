@@ -107,8 +107,6 @@
 // const lowestPrices = Math.min(...prices);
 // console.log(lowestPrices);
 
-
-
 const accounts = [
   [1, 2, 3],
   [4, 3, 2],
@@ -121,7 +119,7 @@ for (let i = 0; i < accounts.length; i++) {
   }
   console.log(sum);
 }
-// let greatArr = 0; 
+// let greatArr = 0;
 
 // for (let i = 0; i < arr2.length; i++) {
 //   let sumA = 0;
@@ -129,14 +127,14 @@ for (let i = 0; i < accounts.length; i++) {
 //   for(let j = 0; j <arr2[i].length; j++){
 //     sumA = sumA + arr2[i][j]
 
-//   } 
+//   }
 
 //   if( sumA > greatArr) {
 //     greatArr = sumA
 //   }
 //   console.log('sum of subarray' + i + ":" + sumA);
 //   console.log('final highest sum' + greatArr);
-  
+
 // }
 
 // const arr2 = [[3, 4, 5],[1, 2, 3], [3, 4, 7]];
@@ -155,14 +153,12 @@ for (let i = 0; i < accounts.length; i++) {
 // });
 // console.log(sum);
 
-
 // const words = "leet";
 // const letter = "e";
 // const arr = [];
 
 // const isIncluded = words.includes(letter);
 // console.log("isIncluded :", isIncluded);
-
 
 // words.forEach(el,index => {
 //   if (el.includes(letter)) {
@@ -184,9 +180,6 @@ for (let i = 0; i < accounts.length; i++) {
 // });
 // console.log(result);
 
-
-
-
 // const words2 = ["ad", "bd", "aaab", "baa", "badab"];
 // const allowed = "ab";
 // const found = [];
@@ -205,53 +198,54 @@ for (let i = 0; i < accounts.length; i++) {
 // });
 // console.log(found);
 
-const stringNumbers = ['333', '343', '444', '3344', '4334'];
-const cc = '34';
-const stored = [];
+// const stringNumbers = ["333", "343", "444", "3344", "4334"];
+// const cc = "34";
+// const stored = [];
 
-stringNumbers.forEach(string => {
-  let isValid = true;
-  for (let char of string) {
-    if (!cc.includes(char)) {
-      isValid = false;
-      break;
-    }
-  }
-  if (isValid) {
-    stored.push(string);
-  }
-});
+// stringNumbers.forEach((string) => {
+//   let isValid = true;
+//   for (let char of string) {
+//     if (!cc.includes(char)) {
+//       isValid = false;
+//       break;
+//     }
+//   }
+//   if (isValid) {
+//     stored.push(string);
+//   }
+// });
 
-console.log(stored); 
+// console.log(stored);
 
 const nums = [8, 1, 2, 2, 3];
-let result = []
+let result = [];
 
-for( let i = 0; i < nums.length; i++){
+for (let i = 0; i < nums.length; i++) {
   let count = 0;
+
   console.log(count);
-  for(let j = 0; j < nums.length; j++){
-    if(nums[j]> nums[i]){
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] > nums[i]) {
       count++;
     }
   }
-result.push(count)
+  console.log(count);
+
+  result.push(count);
 }
 console.log(result);
 
-const result1 =nums.map( i => nums.filter(j => j > i).length);
+const forMap = false;
+const forPromise = Promise;
+const forStack = true;
 
-console.log(result1);
+const sayHello = async () => {
+  let;
+};
 
+// const result1 = nums.map((i) => nums.filter((j) => j > i).length);
 
-
-
-
-
-
-
-
-
+// console.log(result1);
 
 // Массив nums өгөгдсөн үед, nums[i] бүрийн хувьд түүнээс жижиг хэдэн тоо байгааг ол.
 // Өөрөөр хэлбэл, nums[i]-ээс бага nums[j] байх хүчинтэй j-ийн тоог тоол. (j ≠ i байх ёстой).
@@ -265,7 +259,3 @@ console.log(result1);
 // nums[0] = 8 → Үүнээс бага 4 тоо байна: (1, 2, 2, 3).
 // nums[1] = 1 → Үүнээс бага тоо байхгүй.
 // nums[2] = 2 → Үүнээс бага 1 тоо байна: (1).
-
-
-
-
